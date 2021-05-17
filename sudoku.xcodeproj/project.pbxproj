@@ -11,6 +11,16 @@
 		1F3EC2B4264138C6005631FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B3264138C6005631FF /* ContentView.swift */; };
 		1F3EC2B6264138C7005631FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B5264138C7005631FF /* Assets.xcassets */; };
 		1F3EC2B9264138C7005631FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B8264138C7005631FF /* Preview Assets.xcassets */; };
+		1F3EC2C22641390D005631FF /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C12641390D005631FF /* Grid.swift */; };
+		1F3EC2C526414520005631FF /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C426414520005631FF /* GameGridView.swift */; };
+		1F3EC2C72642936E005631FF /* GameGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C62642936E005631FF /* GameGridItemView.swift */; };
+		1F3EC2CA264297DF005631FF /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C9264297DF005631FF /* MainMenuScene.swift */; };
+		1F3EC2CC26429868005631FF /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2CB26429868005631FF /* MenuItemView.swift */; };
+		1F3EC2CE2642A02A005631FF /* NewGameMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2CD2642A02A005631FF /* NewGameMenuScene.swift */; };
+		1F3EC2D02642FA2F005631FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2CF2642FA2F005631FF /* GameScene.swift */; };
+		1F3EC2D22642FBAF005631FF /* AvaliableNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2D12642FBAF005631FF /* AvaliableNumbersView.swift */; };
+		1F765D5C26528BFC00BB6079 /* GameBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */; };
+		1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1FA61264A8CF100D54D70 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +30,16 @@
 		1F3EC2B5264138C7005631FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F3EC2B8264138C7005631FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F3EC2BA264138C7005631FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F3EC2C12641390D005631FF /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		1F3EC2C426414520005631FF /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
+		1F3EC2C62642936E005631FF /* GameGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridItemView.swift; sourceTree = "<group>"; };
+		1F3EC2C9264297DF005631FF /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		1F3EC2CB26429868005631FF /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		1F3EC2CD2642A02A005631FF /* NewGameMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameMenuScene.swift; sourceTree = "<group>"; };
+		1F3EC2CF2642FA2F005631FF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1F3EC2D12642FBAF005631FF /* AvaliableNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliableNumbersView.swift; sourceTree = "<group>"; };
+		1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundShape.swift; sourceTree = "<group>"; };
+		1FC1FA61264A8CF100D54D70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,10 @@
 		1F3EC2B0264138C6005631FF /* sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				1FC1FA60264A8CD800D54D70 /* Models */,
+				1F3EC2C8264297CC005631FF /* Scene */,
+				1F3EC2C326414506005631FF /* Views */,
+				1F3EC2C0264138F6005631FF /* Engine */,
 				1F3EC2B1264138C6005631FF /* sudokuApp.swift */,
 				1F3EC2B3264138C6005631FF /* ContentView.swift */,
 				1F3EC2B5264138C7005631FF /* Assets.xcassets */,
@@ -67,6 +91,44 @@
 				1F3EC2B8264138C7005631FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1F3EC2C0264138F6005631FF /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				1FC1FA61264A8CF100D54D70 /* GameModel.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		1F3EC2C326414506005631FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F3EC2C426414520005631FF /* GameGridView.swift */,
+				1F3EC2C62642936E005631FF /* GameGridItemView.swift */,
+				1F3EC2CB26429868005631FF /* MenuItemView.swift */,
+				1F3EC2D12642FBAF005631FF /* AvaliableNumbersView.swift */,
+				1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F3EC2C8264297CC005631FF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1F3EC2C9264297DF005631FF /* MainMenuScene.swift */,
+				1F3EC2CD2642A02A005631FF /* NewGameMenuScene.swift */,
+				1F3EC2CF2642FA2F005631FF /* GameScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		1FC1FA60264A8CD800D54D70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F3EC2C12641390D005631FF /* Grid.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3EC2CE2642A02A005631FF /* NewGameMenuScene.swift in Sources */,
+				1F3EC2CA264297DF005631FF /* MainMenuScene.swift in Sources */,
 				1F3EC2B4264138C6005631FF /* ContentView.swift in Sources */,
+				1F765D5C26528BFC00BB6079 /* GameBackgroundShape.swift in Sources */,
+				1F3EC2D02642FA2F005631FF /* GameScene.swift in Sources */,
+				1F3EC2C72642936E005631FF /* GameGridItemView.swift in Sources */,
+				1F3EC2D22642FBAF005631FF /* AvaliableNumbersView.swift in Sources */,
 				1F3EC2B2264138C6005631FF /* sudokuApp.swift in Sources */,
+				1F3EC2CC26429868005631FF /* MenuItemView.swift in Sources */,
+				1F3EC2C526414520005631FF /* GameGridView.swift in Sources */,
+				1F3EC2C22641390D005631FF /* Grid.swift in Sources */,
+				1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"sudoku/Preview Content\"";
+				DEVELOPMENT_TEAM = ZCAZ677WZU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -279,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsnow.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -290,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"sudoku/Preview Content\"";
+				DEVELOPMENT_TEAM = ZCAZ677WZU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -300,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsnow.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
