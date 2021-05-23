@@ -32,10 +32,10 @@ class GridGenerator {
     
     func makeGameGrid(for difficulty: Difficulty) -> GameGrid {
         var game: GameGrid = grid
+        let indexes = Array(0...80).shuffled()
         
-        for _ in 0..<difficulty.rawValue {
-            let index = Array(0...80).randomElement()!
-            game[index] = nil
+        for i in 0..<difficulty.rawValue {
+            game[indexes[i]] = nil
         }
         
         return game
@@ -131,7 +131,7 @@ class GridGenerator {
         case flash = 10
         case easy  = 20
         case medium = 30
-        case hard = 45
-        case insane = 60
+        case hard = 40
+        case insane = 50
     }
 }
