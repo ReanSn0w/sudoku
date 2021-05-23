@@ -19,7 +19,7 @@ struct RulesScene: View {
                 }
                         
                 block(title: rulesText.secondTitle) {
-                    NewGameGridView(
+                    GameGridView(
                         grid: .constant(previews.previewGrid),
                         highlightedPoints: .constant(previews.firstHighlightedPoints),
                         errorPoints: .constant([]),
@@ -40,7 +40,7 @@ struct RulesScene: View {
                     Text(rulesText.forthTextPartOne)
                     Text(rulesText.forthTextPartTwo)
                     
-                    NewGameGridView(
+                    GameGridView(
                         grid: .constant(previews.previewGrid),
                         highlightedPoints: .constant(previews.secondHighligtedPoints),
                         errorPoints: .constant(previews.secondErrorPoints),
