@@ -16,11 +16,11 @@ struct NewGameMenuScene: View {
             
             Spacer()
             
-            ButtonMenuItemView("Простой") { self.game = .init(with: .flash) }
-            ButtonMenuItemView("Легкий") { self.game = .init(with: .easy) }
-            ButtonMenuItemView("Средний") { self.game = .init(with: .medium) }
-            ButtonMenuItemView("Сложний") { self.game = .init(with: .hard) }
-            ButtonMenuItemView("Невообразимый") { self.game = .init(with: .insane) }
+            ButtonMenuItemView("Простой") { self.game = .init(.flash) }
+            ButtonMenuItemView("Легкий") { self.game = .init(.easy) }
+            ButtonMenuItemView("Средний") { self.game = .init(.medium) }
+            ButtonMenuItemView("Сложний") { self.game = .init(.hard) }
+            ButtonMenuItemView("Невообразимый") { self.game = .init(.insane) }
         }
         .padding()
         .navigationBarTitle(Text("Новая игра"), displayMode: .large)

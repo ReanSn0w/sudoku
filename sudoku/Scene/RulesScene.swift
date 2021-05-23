@@ -93,23 +93,23 @@ class FieldsPreviews {
         nil, nil, nil, nil, 2, 5, 7, nil, nil
     ]
     
-    let firstHighlightedPoints: [CGPoint] = [
-        CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 1), CGPoint(x: 0, y: 2),
-        CGPoint(x: 1, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 1, y: 2),
-        CGPoint(x: 2, y: 0), CGPoint(x: 2, y: 1), CGPoint(x: 2, y: 2)
+    let firstHighlightedPoints: [Point] = [
+        Point(x: 0, y: 0), Point(x: 0, y: 1), Point(x: 0, y: 2),
+        Point(x: 1, y: 0), Point(x: 1, y: 1), Point(x: 1, y: 2),
+        Point(x: 2, y: 0), Point(x: 2, y: 1), Point(x: 2, y: 2)
     ]
     
-    let secondHighligtedPoints: [CGPoint] = [
-        CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 1), CGPoint(x: 0, y: 2),
-        CGPoint(x: 0, y: 3), CGPoint(x: 0, y: 4), CGPoint(x: 0, y: 5),
-        CGPoint(x: 0, y: 6), CGPoint(x: 0, y: 7), CGPoint(x: 0, y: 8)
+    let secondHighligtedPoints: [Point] = [
+        Point(x: 0, y: 0), Point(x: 0, y: 1), Point(x: 0, y: 2),
+        Point(x: 0, y: 3), Point(x: 0, y: 4), Point(x: 0, y: 5),
+        Point(x: 0, y: 6), Point(x: 0, y: 7), Point(x: 0, y: 8)
     ]
     
-    let secondErrorPoints: [CGPoint] = [
-        CGPoint(x: 1, y: 2), CGPoint(x: 2, y: 3)
+    let secondErrorPoints: [Point] = [
+        Point(x: 1, y: 2), Point(x: 2, y: 3)
     ]
     
-    let secondSelectedField: CGPoint? = CGPoint(x: 0, y: 8)
+    let secondSelectedField: Point? = Point(x: 0, y: 8)
 }
 
 class RulesText {
