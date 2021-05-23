@@ -10,17 +10,22 @@ import SwiftUI
 struct AvaliableNumbersView: View {
     var avaliableNumbers: Set<Int>
     @Binding var selectedNumber: Int?
+    var doStep: () -> Void = {}
     
     var body: some View {
         GeometryReader { g in
             Group {
                 ForEach(1...9, id: \.self) { number in
                     Button(action: {
-                        selectedNumber = number
+                        if selectedNumber == number {
+                            doStep()
+                        } else {
+                            selectedNumber = number
+                        }
                     }) {
                         GameGridItemView(
                             number,
-                            highlighted: selectedNumber == number,
+                            highlight: selectedNumber == number ? .base : nil,
                             selected: false)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -30,7 +35,7 @@ struct AvaliableNumbersView: View {
                         alignment: .center)
                     .offset(
                         x: CGFloat((number - 1) % 9) * g.size.width / 9)
-                    .opacity(avaliableNumbers.contains(number) ? 1 : 0.5)
+                    .opacity(avaliableNumbers.contains(number) ? 1 : 0.3)
                 }
             }
         }
