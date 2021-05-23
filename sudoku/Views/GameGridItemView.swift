@@ -9,14 +9,14 @@ import SwiftUI
 
 struct GameGridItemView: View {
     var number: Int?
-    var highlighted: Bool
+    var highlight: Highlight?
     var selected: Bool
     
     init(_ number: Int?
-         , highlighted: Bool
+         , highlight: Highlight?
          , selected: Bool) {
         self.number = number
-        self.highlighted = highlighted
+        self.highlight = highlight
         self.selected = selected
     }
     
@@ -30,8 +30,8 @@ struct GameGridItemView: View {
     
     var body: some View {
         ZStack {
-            if highlighted {
-                Color.accentColor
+            if highlight != nil {
+                highlight!.color
                     .opacity(0.5)
             }
             
@@ -46,6 +46,23 @@ struct GameGridItemView: View {
         .padding(2)
         .overlay(Text(value))
     }
+    
+    enum Highlight {
+        case base
+        case error
+        case other(Color)
+        
+        var color: Color {
+            switch self {
+            case .base:
+                return .accentColor
+            case .error:
+                return .red
+            case .other(let color):
+                return color
+            }
+        }
+    }
 }
 
 struct GameGridItemView_Previews: PreviewProvider {
@@ -53,31 +70,31 @@ struct GameGridItemView_Previews: PreviewProvider {
         VStack {
             GameGridItemView(
                 2,
-                highlighted: true,
+                highlight: .base,
                 selected: true)
                 .frame(width: 40, height: 40)
             
             GameGridItemView(
                 2,
-                highlighted: true,
+                highlight: .base,
                 selected: false)
                 .frame(width: 40, height: 40)
             
             GameGridItemView(
                 2,
-                highlighted: false,
+                highlight: nil,
                 selected: false)
                 .frame(width: 40, height: 40)
             
             GameGridItemView(
                 nil,
-                highlighted: false,
+                highlight: .error,
                 selected: true)
                 .frame(width: 40, height: 40)
             
             GameGridItemView(
                 nil,
-                highlighted: false,
+                highlight: .error,
                 selected: false)
                 .frame(width: 40, height: 40)
         }
