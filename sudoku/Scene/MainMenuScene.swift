@@ -17,6 +17,16 @@ struct MainMenuScene: View {
             NavigationMenuItemView("Новая игра") {
                 NewGameMenuScene()
             }
+            
+            NavigationMenuItemView("Правила") {
+                RulesScene()
+            }
+            
+            Link("Исходный код",
+                 destination: URL(
+                    string: "https://github.com/ReanSn0w/sudoku"
+                 )!
+            )
         }
         .padding()
         .navigationBarTitle(Text("Sudoku"), displayMode: .large)
