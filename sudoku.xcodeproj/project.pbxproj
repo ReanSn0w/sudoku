@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3E1BC9265A57D9004FD438 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E1BC8265A57D9004FD438 /* Point.swift */; };
+		1F3E1BCB265A5E7B004FD438 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E1BCA265A5E7B004FD438 /* Step.swift */; };
 		1F3EC2B2264138C6005631FF /* sudokuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B1264138C6005631FF /* sudokuApp.swift */; };
 		1F3EC2B4264138C6005631FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B3264138C6005631FF /* ContentView.swift */; };
 		1F3EC2B6264138C7005631FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B5264138C7005631FF /* Assets.xcassets */; };
 		1F3EC2B9264138C7005631FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EC2B8264138C7005631FF /* Preview Assets.xcassets */; };
 		1F3EC2C22641390D005631FF /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C12641390D005631FF /* Grid.swift */; };
-		1F3EC2C526414520005631FF /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C426414520005631FF /* GameGridView.swift */; };
 		1F3EC2C72642936E005631FF /* GameGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C62642936E005631FF /* GameGridItemView.swift */; };
 		1F3EC2CA264297DF005631FF /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2C9264297DF005631FF /* MainMenuScene.swift */; };
 		1F3EC2CC26429868005631FF /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2CB26429868005631FF /* MenuItemView.swift */; };
@@ -21,11 +22,14 @@
 		1F3EC2D22642FBAF005631FF /* AvaliableNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EC2D12642FBAF005631FF /* AvaliableNumbersView.swift */; };
 		1F586EE72652D21A0028EDA0 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 1F586EE62652D21A0028EDA0 /* LICENCE */; };
 		1F586EEA2652E03F0028EDA0 /* RulesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F586EE92652E03F0028EDA0 /* RulesScene.swift */; };
+		1F586EEC26592BE80028EDA0 /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F586EEB26592BE80028EDA0 /* GameGridView.swift */; };
 		1F765D5C26528BFC00BB6079 /* GameBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */; };
 		1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1FA61264A8CF100D54D70 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F3E1BC8265A57D9004FD438 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		1F3E1BCA265A5E7B004FD438 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		1F3EC2AE264138C6005631FF /* sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3EC2B1264138C6005631FF /* sudokuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sudokuApp.swift; sourceTree = "<group>"; };
 		1F3EC2B3264138C6005631FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +37,6 @@
 		1F3EC2B8264138C7005631FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F3EC2BA264138C7005631FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F3EC2C12641390D005631FF /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
-		1F3EC2C426414520005631FF /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
 		1F3EC2C62642936E005631FF /* GameGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridItemView.swift; sourceTree = "<group>"; };
 		1F3EC2C9264297DF005631FF /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		1F3EC2CB26429868005631FF /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		1F586EE62652D21A0028EDA0 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		1F586EE82652D2560028EDA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1F586EE92652E03F0028EDA0 /* RulesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesScene.swift; sourceTree = "<group>"; };
+		1F586EEB26592BE80028EDA0 /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
 		1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundShape.swift; sourceTree = "<group>"; };
 		1FC1FA61264A8CF100D54D70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,11 +115,11 @@
 		1F3EC2C326414506005631FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1F3EC2C426414520005631FF /* GameGridView.swift */,
 				1F3EC2C62642936E005631FF /* GameGridItemView.swift */,
 				1F3EC2CB26429868005631FF /* MenuItemView.swift */,
 				1F3EC2D12642FBAF005631FF /* AvaliableNumbersView.swift */,
 				1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */,
+				1F586EEB26592BE80028EDA0 /* GameGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				1F3EC2C12641390D005631FF /* Grid.swift */,
+				1F3E1BC8265A57D9004FD438 /* Point.swift */,
+				1F3E1BCA265A5E7B004FD438 /* Step.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3EC2CE2642A02A005631FF /* NewGameMenuScene.swift in Sources */,
+				1F586EEC26592BE80028EDA0 /* GameGridView.swift in Sources */,
+				1F3E1BCB265A5E7B004FD438 /* Step.swift in Sources */,
 				1F3EC2CA264297DF005631FF /* MainMenuScene.swift in Sources */,
 				1F3EC2B4264138C6005631FF /* ContentView.swift in Sources */,
 				1F765D5C26528BFC00BB6079 /* GameBackgroundShape.swift in Sources */,
@@ -218,7 +226,7 @@
 				1F3EC2D22642FBAF005631FF /* AvaliableNumbersView.swift in Sources */,
 				1F3EC2B2264138C6005631FF /* sudokuApp.swift in Sources */,
 				1F3EC2CC26429868005631FF /* MenuItemView.swift in Sources */,
-				1F3EC2C526414520005631FF /* GameGridView.swift in Sources */,
+				1F3E1BC9265A57D9004FD438 /* Point.swift in Sources */,
 				1F3EC2C22641390D005631FF /* Grid.swift in Sources */,
 				1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */,
 				1F586EEA2652E03F0028EDA0 /* RulesScene.swift in Sources */,
