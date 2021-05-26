@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainMenuScene: View {
+    @EnvironmentObject var gc: GameCenter
+    
     var body: some View {
         VStack(alignment: .trailing, spacing: 16) {
             HStack { Spacer() }

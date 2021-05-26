@@ -12,6 +12,7 @@ struct sudokuApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(GameCenter.shared)
         }
     }
 }
