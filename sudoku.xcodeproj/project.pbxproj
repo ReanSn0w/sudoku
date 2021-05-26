@@ -24,6 +24,8 @@
 		1F586EEA2652E03F0028EDA0 /* RulesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F586EE92652E03F0028EDA0 /* RulesScene.swift */; };
 		1F586EEC26592BE80028EDA0 /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F586EEB26592BE80028EDA0 /* GameGridView.swift */; };
 		1F765D5C26528BFC00BB6079 /* GameBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */; };
+		1F93CBDD265D28EF00493C1B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F93CBDC265D28EF00493C1B /* GameKit.framework */; };
+		1F93CBDF265D2E5600493C1B /* GameKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93CBDE265D2E5600493C1B /* GameKit.swift */; };
 		1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1FA61264A8CF100D54D70 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		1F586EE92652E03F0028EDA0 /* RulesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesScene.swift; sourceTree = "<group>"; };
 		1F586EEB26592BE80028EDA0 /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
 		1F765D5B26528BFC00BB6079 /* GameBackgroundShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundShape.swift; sourceTree = "<group>"; };
+		1F93CBDC265D28EF00493C1B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		1F93CBDE265D2E5600493C1B /* GameKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKit.swift; sourceTree = "<group>"; };
 		1FC1FA61264A8CF100D54D70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F93CBDD265D28EF00493C1B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 				1F586EE62652D21A0028EDA0 /* LICENCE */,
 				1F3EC2B0264138C6005631FF /* sudoku */,
 				1F3EC2AF264138C6005631FF /* Products */,
+				1F93CBDB265D28EF00493C1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC1FA61264A8CF100D54D70 /* GameModel.swift */,
+				1F93CBDE265D2E5600493C1B /* GameKit.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -133,6 +140,14 @@
 				1F586EE92652E03F0028EDA0 /* RulesScene.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		1F93CBDB265D28EF00493C1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F93CBDC265D28EF00493C1B /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		1FC1FA60264A8CD800D54D70 /* Models */ = {
@@ -161,6 +176,8 @@
 			dependencies = (
 			);
 			name = sudoku;
+			packageProductDependencies = (
+			);
 			productName = sudoku;
 			productReference = 1F3EC2AE264138C6005631FF /* sudoku.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +205,8 @@
 				Base,
 			);
 			mainGroup = 1F3EC2A5264138C6005631FF;
+			packageReferences = (
+			);
 			productRefGroup = 1F3EC2AF264138C6005631FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F93CBDF265D2E5600493C1B /* GameKit.swift in Sources */,
 				1F3EC2CE2642A02A005631FF /* NewGameMenuScene.swift in Sources */,
 				1F586EEC26592BE80028EDA0 /* GameGridView.swift in Sources */,
 				1F3E1BCB265A5E7B004FD438 /* Step.swift in Sources */,
