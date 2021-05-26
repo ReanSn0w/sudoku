@@ -127,11 +127,26 @@ class GridGenerator {
         case transporate
     }
     
-    enum Difficulty: Int {
+    enum Difficulty: Int, Codable, CaseIterable, Hashable {
         case flash = 10
         case easy  = 20
         case medium = 30
         case hard = 40
         case insane = 50
+        
+        var name: String {
+            switch self {
+            case .flash:
+                return "Простой"
+            case .easy:
+                return "Легкий"
+            case .medium:
+                return "Средний"
+            case .hard:
+                return "Сложный"
+            case .insane:
+                return "Невообразимый"
+            }
+        }
     }
 }
