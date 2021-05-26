@@ -20,22 +20,21 @@ struct GameScene: View {
         VStack(alignment: .leading) {
             Group {
                 Text("Счет: ")
-                    +
-                    Text("\(model.score)").font(.headline)
+                +
+                Text("\(model.score)").font(.headline)
                 
                 Text("Время: ")
-                    +
-                    Text("00:00:00").font(.headline)
+                +
+                Text(model.gameTimer).font(.headline)
             }
             .padding(.horizontal)
+            .onReceive(model.timer) { _ in
+                if !model.gameEnded.wrappedValue {
+                    self.model.seconds += 1
+                }
+            }
             
             Spacer()
-            
-//            GameGridView(
-//                model.gameGrid,
-//                selectedNumber: $model.selectedNumber,
-//                selectedGridItem: $model.selectedGridItem)
-//                .aspectRatio(1, contentMode: .fit)
             
             GameGridView(
                 grid: model.bindingGrid,
@@ -57,6 +56,8 @@ struct GameScene: View {
             Spacer()
         }
         .overlay(exitButton, alignment: .topTrailing)
+        .onAppear { GameCenter.shared.gameKitAccessPoint = false }
+        .onDisappear { GameCenter.shared.gameKitAccessPoint = true }
         .alert(isPresented: model.gameEnded, content: {
             Alert(title: Text("Поздравляем!"),
                   message: Text("Игра успешно завершена"),

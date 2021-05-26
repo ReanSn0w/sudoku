@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 class GameModel: ObservableObject, Identifiable {
+    private let difficulty: GridGenerator.Difficulty
     private let startGrid: GameGrid
-    private(set) var timer: Timer?
+    private(set) var timer: Publishers.Autoconnect<Timer.TimerPublisher>
+    
+    @Published var seconds: Int = 0
     
     @Published private var history = GameHistory() {
         didSet { validateGrid()}
@@ -27,11 +31,19 @@ class GameModel: ObservableObject, Identifiable {
     init(_ difficulty: GridGenerator.Difficulty) {
         let generator = GridGenerator()
         
+        self.difficulty = difficulty
         self.startGrid = generator.makeGameGrid(for: difficulty)
-        
-        // TODO: - Натсройка таймера
+        self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
         
         validateGrid()
+    }
+    
+    deinit {
+        guard gameEnded.wrappedValue else { return }
+        
+        GameCenter.shared.saveScore(
+            to: difficulty.scoreLeaderboardID,
+            score: self.score)
     }
     
     func doStep() {
@@ -45,6 +57,7 @@ class GameModel: ObservableObject, Identifiable {
         }
         
         history.addStep(Step.init(point, value: number, score: timeScore))
+        self.point = nil
     }
     
     func undoStep() {
@@ -61,8 +74,16 @@ extension GameModel {
     
     /// проперти для рассчета очков по таймеру
     private var timeScore: Int {
-        // TODO: - произвести рассчет исходя из времени
-        return 1000
+        let val = 1000 - seconds
+        return val < 400 ? 400 : val
+    }
+    
+    var gameTimer: String {
+        let hour = seconds / 60 / 60
+        let minute = seconds / 60 - hour * 60
+        let second = seconds - hour * 60 - minute * 60
+        
+        return "\(hour < 10 ? "0" : "")\(hour):\(minute < 10 ? "0" : "")\(minute):\(second < 10 ? "0" : "")\(second)"
     }
     
     var score: Int {
@@ -74,7 +95,7 @@ extension GameModel {
     }
     
     var gameEnded: Binding<Bool> {
-        .constant(!gameGrid.contains(nil))
+        .constant(!gameGrid.contains(nil) && wrongPoints.isEmpty)
     }
     
     var highlightedPoints: Binding<[Point]> {
@@ -142,7 +163,7 @@ extension GameModel {
                 continue
             }
             
-            if points.count < 10 {
+            if points.count < 9 {
                 avaliableNumbers.insert(number)
             }
         }
