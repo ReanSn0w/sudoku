@@ -37,6 +37,7 @@ struct GameScene: View {
             Spacer()
             
             GameGridView(
+                defaultGrid: model.startGrid,
                 grid: model.bindingGrid,
                 highlightedPoints: model.highlightedPoints,
                 errorPoints: $model.wrongPoints,

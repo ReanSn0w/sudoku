@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameGridView: View {
+    var defaultGrid: GameGrid = GameGrid.init(repeating: nil, count: 81)
     @Binding var grid: GameGrid
     @Binding var highlightedPoints: [Point]
     @Binding var errorPoints: [Point]
@@ -22,7 +23,8 @@ struct GameGridView: View {
                     GameGridItemView(
                             grid[index],
                             highlight: highlightForIndex(index),
-                            selected: selectedForIndex(index))
+                            selected: selectedForIndex(index),
+                            standart: defaultGrid[index] != nil)
                         .frame(
                             width: g.size.width / 9,
                             height: g.size.width / 9,
@@ -36,7 +38,7 @@ struct GameGridView: View {
                 }
             }
         }
-        .background(GameBackground(offset: 8))
+        .background(GameBackground(offset: 8).opacity(0.35))
         .padding()
     }
     

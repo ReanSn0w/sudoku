@@ -11,13 +11,16 @@ struct GameGridItemView: View {
     var number: Int?
     var highlight: Highlight?
     var selected: Bool
+    var standart: Bool
     
     init(_ number: Int?
          , highlight: Highlight?
-         , selected: Bool) {
+         , selected: Bool
+         , standart: Bool = false) {
         self.number = number
         self.highlight = highlight
         self.selected = selected
+        self.standart = standart
     }
     
     var value: String {
@@ -44,7 +47,7 @@ struct GameGridItemView: View {
         )
         .cornerRadius(5)
         .padding(2)
-        .overlay(Text(value))
+        .overlay(Text(value).fontWeight(standart ? .light : .bold))
     }
     
     enum Highlight {
@@ -77,7 +80,8 @@ struct GameGridItemView_Previews: PreviewProvider {
             GameGridItemView(
                 2,
                 highlight: .base,
-                selected: false)
+                selected: false,
+                standart: true)
                 .frame(width: 40, height: 40)
             
             GameGridItemView(
