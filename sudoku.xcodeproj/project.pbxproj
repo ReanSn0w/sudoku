@@ -27,6 +27,7 @@
 		1F93CBDD265D28EF00493C1B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F93CBDC265D28EF00493C1B /* GameKit.framework */; };
 		1F93CBDF265D2E5600493C1B /* GameKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93CBDE265D2E5600493C1B /* GameKit.swift */; };
 		1FC1FA62264A8CF100D54D70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1FA61264A8CF100D54D70 /* GameModel.swift */; };
+		1FC64D2D2662B32E0036C8F3 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC64D2C2662B32E0036C8F3 /* ScoresScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		1F93CBDC265D28EF00493C1B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		1F93CBDE265D2E5600493C1B /* GameKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKit.swift; sourceTree = "<group>"; };
 		1FC1FA61264A8CF100D54D70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		1FC64D2C2662B32E0036C8F3 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				1F3EC2CD2642A02A005631FF /* NewGameMenuScene.swift */,
 				1F3EC2CF2642FA2F005631FF /* GameScene.swift */,
 				1F586EE92652E03F0028EDA0 /* RulesScene.swift */,
+				1FC64D2C2662B32E0036C8F3 /* ScoresScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				1F3EC2C72642936E005631FF /* GameGridItemView.swift in Sources */,
 				1F3EC2D22642FBAF005631FF /* AvaliableNumbersView.swift in Sources */,
 				1F3EC2B2264138C6005631FF /* sudokuApp.swift in Sources */,
+				1FC64D2D2662B32E0036C8F3 /* ScoresScene.swift in Sources */,
 				1F3EC2CC26429868005631FF /* MenuItemView.swift in Sources */,
 				1F3E1BC9265A57D9004FD438 /* Point.swift in Sources */,
 				1F3EC2C22641390D005631FF /* Grid.swift in Sources */,
@@ -391,7 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsnow.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsnow.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

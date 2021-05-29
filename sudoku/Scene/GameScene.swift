@@ -57,7 +57,10 @@ struct GameScene: View {
         }
         .overlay(exitButton, alignment: .topTrailing)
         .onAppear { GameCenter.shared.gameKitAccessPoint = false }
-        .onDisappear { GameCenter.shared.gameKitAccessPoint = true }
+        .onDisappear {
+            self.model.endActions()
+            GameCenter.shared.gameKitAccessPoint = true
+        }
         .alert(isPresented: model.gameEnded, content: {
             Alert(title: Text("Поздравляем!"),
                   message: Text("Игра успешно завершена"),

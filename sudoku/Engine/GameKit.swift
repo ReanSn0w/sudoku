@@ -16,7 +16,7 @@ class GameCenter: ObservableObject {
     private let localPlayer = GKLocalPlayer.local
     
     private init() {
-        GKAccessPoint.shared.location = .bottomLeading
+        GKAccessPoint.shared.location = .topTrailing
         
         self.authentificateUser()
     }
@@ -38,6 +38,7 @@ class GameCenter: ObservableObject {
             }
             
             self.gameKitAccessPoint = true
+            self.getScores()
             self.objectWillChange.send()
         }
     }
@@ -55,6 +56,8 @@ class GameCenter: ObservableObject {
             }
             
             leaderboards.forEach { leaderboard in
+                self.scores[leaderboard.baseLeaderboardID] = 0
+                
                 leaderboard.loadEntries(for: [self.localPlayer], timeScope: .allTime) { entry, _, error in
                     guard error == nil,
                           let entry = entry
@@ -83,7 +86,7 @@ class GameCenter: ObservableObject {
 //
 //    }
     
-    func saveScore(to leaderboard: String, score: Int) {
+    private func saveScore(to leaderboard: String, score: Int) {
         GKLeaderboard.loadLeaderboards(IDs: [leaderboard]) { [weak self] leaderboards, err in
             guard let self = self,
                   let leaderboard = leaderboards?.first

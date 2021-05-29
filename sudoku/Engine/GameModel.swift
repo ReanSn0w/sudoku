@@ -38,12 +38,12 @@ class GameModel: ObservableObject, Identifiable {
         validateGrid()
     }
     
-    deinit {
+    func endActions() {
         guard gameEnded.wrappedValue else { return }
         
-        GameCenter.shared.saveScore(
-            to: difficulty.scoreLeaderboardID,
-            score: self.score)
+        GameCenter.shared.sendScore(
+            self.score,
+            difficulty: difficulty)
     }
     
     func doStep() {

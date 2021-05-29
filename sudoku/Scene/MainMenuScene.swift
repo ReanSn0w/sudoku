@@ -20,6 +20,12 @@ struct MainMenuScene: View {
                 NewGameMenuScene()
             }
             
+            if !gc.scores.isEmpty {
+                NavigationMenuItemView("Результаты") {
+                    ScoresScene()
+                }
+            }
+            
             NavigationMenuItemView("Правила") {
                 RulesScene()
             }
