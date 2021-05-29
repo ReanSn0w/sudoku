@@ -17,11 +17,8 @@ struct AvaliableNumbersView: View {
             Group {
                 ForEach(1...9, id: \.self) { number in
                     Button(action: {
-                        if selectedNumber == number {
-                            doStep()
-                        } else {
-                            selectedNumber = number
-                        }
+                        selectedNumber = number
+                        doStep()
                     }) {
                         GameGridItemView(
                             number,
