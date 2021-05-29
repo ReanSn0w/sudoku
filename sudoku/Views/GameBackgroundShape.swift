@@ -21,8 +21,8 @@ struct GameBackground: Shape {
                     width: vertical ? 1 : (rect.width - offset * 6) / 3,
                     height: vertical ? (rect.width - offset * 6) / 3 : 1)
                 let origin = CGPoint(
-                    x: vertical ? (rect.maxX - 2) / 3 * (line ? 1 : 2) : (rect.maxX - 2) / 3 * (block - 1) + offset,
-                    y: vertical ? (rect.maxY - 2) / 3 * (block - 1) + offset : (rect.maxY - 2) / 3 * (line ? 1 : 2))
+                    x: vertical ? (rect.maxX - 1) / 3 * (line ? 1 : 2) : (rect.maxX - 1) / 3 * (block - 1) + offset,
+                    y: vertical ? (rect.maxY - 1) / 3 * (block - 1) + offset : (rect.maxY - 1) / 3 * (line ? 1 : 2))
                 
                 path.addPath(
                     Rectangle()
