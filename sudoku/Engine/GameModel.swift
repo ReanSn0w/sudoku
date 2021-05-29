@@ -10,8 +10,8 @@ import Combine
 
 class GameModel: ObservableObject, Identifiable {
     private let difficulty: GridGenerator.Difficulty
-    private let startGrid: GameGrid
     private(set) var timer: Publishers.Autoconnect<Timer.TimerPublisher>
+    let startGrid: GameGrid
     
     @Published var seconds: Int = 0
     
